@@ -1,0 +1,22 @@
+
+    
+    
+    
+    create  table `akash`.`akash_dbt_raw`.`raw_products` (`sku` string ,`name` string ,`type` string ,`price` bigint ,`description` string )
+    
+    using delta
+  
+    
+    
+    
+    
+    
+  ;
+    -- dbt seed --
+    
+          insert overwrite `akash`.`akash_dbt_raw`.`raw_products` values
+          (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+      
+
+;
+  
